@@ -51,7 +51,7 @@ function playRound(computerSelection, userSelection){
 
 function game(){  
   for (let i = 0; i < 5; i++){
-    playRound(computerSelection, userSelection);
+    console.log(playRound(computerSelection, userSelection));
     console.log(`The current score is User: ${userScore} Computer: ${computerScore}.`);
   }
   console.log('The game is over.');
