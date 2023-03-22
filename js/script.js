@@ -47,7 +47,7 @@ function playerChoice(){
     computerScore++;
     return 'You lose!'; 
   }
-}
+
 
 //function game(){  
   for (let i = 0; i < 5; i++){
@@ -63,6 +63,6 @@ function playerChoice(){
     } else {
       console.log('There has been a tie.');
     }
-}
+
 
 console.log(game());
