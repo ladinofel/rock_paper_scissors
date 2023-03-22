@@ -15,7 +15,7 @@ function playerChoice(){
   return userChoice;
 }
 
-function playRound(computerSelection, userSelection){
+//function playRound(computerSelection, userSelection){
   computerSelection = getComputerChoice();
   userSelection = playerChoice();
   console.log((`The computer selected ${computerSelection}.`));
@@ -49,7 +49,7 @@ function playRound(computerSelection, userSelection){
   }
 }
 
-function game(){  
+//function game(){  
   for (let i = 0; i < 5; i++){
     console.log(playRound(computerSelection, userSelection));
     console.log(`The current score is User: ${userScore} Computer: ${computerScore}.`);
