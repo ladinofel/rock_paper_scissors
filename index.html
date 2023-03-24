@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="./js/script.js"></script>
   <meta charset="utf-8">
   <title>Rock-Paper-Scissors</title>
   <link rel="family-font" href="<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,19 +15,23 @@
   </div>
   <div class="container">
     <div class="left-content">
-      <button><img class="user-rock" src="./icons/hand-back-fist-regular.svg" alt="A hand closed in a fist."></button>
-      <button><img class="user-paper" src="./icons/hand-regular.svg" alt="An open hand."></button>
-      <button><img class="user-scissors" src="./icons/hand-scissors-regular.svg" alt="A hand making a scissors figure."></button>
+      <button><img class="user-btn" id="rock" src="./icons/hand-back-fist-regular.svg" alt="A hand closed in a fist."></button>
+      <button><img class="user-btn" id="paper" src="./icons/hand-regular.svg" alt="An open hand."></button>
+      <button><img class="user-btn" id="scissors" src="./icons/hand-scissors-regular.svg" alt="A hand making a scissors figure."></button>
     </div>
     <div class="center-content">
-      <p class="display-text">> Welcome to Rock, Paper and Scissors.</p>
+      <div class="intro-text">
+      <p>> Welcome to Rock, Paper and Scissors.</p>
       <ul>
         <li>Rock beats scissors.</li>
         <li>Scissors beat paper.</li>
         <li>Paper beats rock.</li>
       </ul>
-      <p class="display-text"> Make your selection using the bottoms to your left.<br><br> The best out of five is the winner. </p>
-      <button id="start-btn">START</button>
+      <p>Make your selection using the bottoms to your left.<br><br> The best out of five is the winner.</p>
+      </div>
+      <div class="display-text">
+        <p></p>
+      </div>
     </div>
     <div class="right-content">
       <button><img class="pc-rock"  src="./icons/hand-back-fist-solid.svg" alt="A hand closed in a fist."></button>
@@ -37,4 +40,5 @@
     </div>
   </div>
 </body>
+<script src="./js/script.js"></script>
 </html>
