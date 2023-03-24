@@ -31,11 +31,9 @@ function playerChoice(){
     }
   });
   });
-  
 };
 
 playerChoice();
-
 
 function playRound(){
   computerSelection = getComputerChoice();
@@ -47,34 +45,58 @@ function playRound(){
   else if(computerSelection == 'rock' && userSelection == 'paper'){
     userScore++;
     console.log('You win!');
+    console.log(computerScore);
+    console.log(userScore);
   }
   else if(computerSelection == 'rock' && userSelection == 'scissors'){
     computerScore++;
     console.log('You lose!');
+    console.log(computerScore);
+    console.log(userScore);
   }
   else if(computerSelection == 'paper' && userSelection == 'scissors'){
     userScore++;
     console.log('You win!');
+    console.log(computerScore);
+    console.log(userScore);
   }
   else if(computerSelection == 'paper' && userSelection == 'rock'){
     computerScore++;
     console.log('You lose!');
+    console.log(computerScore);
+    console.log(userScore);
   }
   else if(computerSelection == 'scissors' && userSelection == 'rock'){
     userScore++;
     console.log('You win!'); 
+    console.log(computerScore);
+    console.log(userScore);
   }
   else if(computerSelection == 'scissors' && userSelection == 'paper'){
     computerScore++;
     console.log('You lose!'); 
+    console.log(computerScore);
+    console.log(userScore);
   }
+  if(computerScore === 5){
+    console.log('The computer wins!');
+    computerScore = 0;
+    userScore = 0;
+  }
+  else if(userScore === 5){
+    console.log('The user wins!');
+    computerScore = 0;
+    userScore = 0;
+  }
+  
 };
 
-//playRound();
+
 /*
 function game(){  
   for (let i = 0; i < 5; i++){
-    console.log(playRound(computerSelection, userSelection));
+    playerChoice();
+    //console.log(playRound(computerSelection, userSelection));
     console.log(`The current score is User: ${userScore} Computer: ${computerScore}.`);
   }
   console.log('The game is over.');
@@ -88,8 +110,8 @@ function game(){
     }
 
   }
-console.log(game());
-
+game();
 */
+
 
 
