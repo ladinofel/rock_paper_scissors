@@ -40,14 +40,7 @@ cursor: pointer;
 .center-content {
   display: flex;
   flex-direction: column;
-  background-color:#FDF7FF;
-  max-height: 430px;
-  max-width: 430px;
-  border: solid;
-  border-color:#6A35C1;
-  border-radius: 15px;
-  color:#6A35C1;
-  flex-grow: 1;
+  
 }
 
 .container {
@@ -76,4 +69,23 @@ li {
   font-size: 20px;
 }
 
+.center-top{
+  margin: 0 0;
+  background-color:#FDF7FF;
+  max-height: 250px;
+  max-width: 430px;
+  border: solid;
+  border-color:#6A35C1;
+  border-radius: 15px;
+  color:#6A35C1;
+  flex-grow: 1;
+}
+.center-bottom {
+  flex-grow: 1;
+  background-color:#6A35C1;
+  border: solid;
+  border-radius: 15px;
+  margin-top:20px;
+  border-color: #6A35C1;
+}
 
