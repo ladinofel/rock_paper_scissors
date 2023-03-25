@@ -11,7 +11,7 @@ body {
   justify-content: center;
   padding: 15px;
   border-style: solid;
-  margin: 50px 150px 50px 150px;
+  margin: 20px 150px 20px 150px;
   border-radius: 15px;  
 }
 
@@ -46,18 +46,21 @@ cursor: pointer;
 .container {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 0px;
 }
 
 .left-content {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  justify-content: space-around;
 }
 
 .right-content {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  justify-content: space-around;
 }
 
  .intro-text {
@@ -87,5 +90,9 @@ li {
   border-radius: 15px;
   margin-top:20px;
   border-color: #6A35C1;
+  color: #FDF7FF;
+  padding: 0px 20px;
+  font-size: 20px;
+  height: 260px;
 }
 

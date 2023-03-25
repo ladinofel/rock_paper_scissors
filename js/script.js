@@ -1,3 +1,9 @@
+const user_selection = document.querySelector('#user-selection');
+const pc_selection = document.querySelector('#pc-selection');
+const round_result = document.querySelector('#round-result');
+const user_score = document.querySelector('#user-score');
+const pc_score = document.querySelector('#pc-score');
+const final_result = document.querySelector('#final-result');
 
 const options =['rock', 'paper', 'scissors'];
 let computerSelection;
@@ -17,16 +23,13 @@ function playerChoice(){
   btn.addEventListener('click', () => {
     if(btn.id === 'rock'){
       userSelection = btn.id; 
-      console.log(userSelection);
       playRound();
     }
     else if(btn.id === 'paper'){
       userSelection = btn.id;
-      console.log(userSelection);
       playRound();
     } else {
       userSelection = btn.id;
-      console.log(userSelection);
       playRound();
     }
   });
@@ -37,57 +40,59 @@ playerChoice();
 
 function playRound(){
   computerSelection = getComputerChoice();
-  console.log((`The computer selected ${computerSelection}.`));
-  console.log((`You selected ${userSelection}.`));
+  user_selection.textContent = `You selected ${userSelection}.`;
+  pc_selection.textContent = `The computer selected ${computerSelection}.`;
   if(computerSelection == userSelection){
-    console.log('TIE');
+    round_result.textContent = 'There has been a tie.'; 
   }
   else if(computerSelection == 'rock' && userSelection == 'paper'){
     userScore++;
-    console.log('You win!');
-    console.log(computerScore);
-    console.log(userScore);
+    round_result.textContent = 'You win!';
+    user_score.textContent = `Your score is: ${userScore}`;
+    pc_score.textContent = `The computer's score is: ${computerScore}`;
   }
   else if(computerSelection == 'rock' && userSelection == 'scissors'){
     computerScore++;
-    console.log('You lose!');
-    console.log(computerScore);
-    console.log(userScore);
+    round_result.textContent = 'You lose!';
+    user_score.textContent = `Your score is: ${userScore}`;
+    pc_score.textContent = `The computer's score is: ${computerScore}`;
   }
   else if(computerSelection == 'paper' && userSelection == 'scissors'){
     userScore++;
-    console.log('You win!');
-    console.log(computerScore);
-    console.log(userScore);
+    round_result.textContent = 'You win!';
+    user_score.textContent = `Your score is: ${userScore}`;
+    pc_score.textContent = `The computer's score is: ${computerScore}`;
   }
   else if(computerSelection == 'paper' && userSelection == 'rock'){
     computerScore++;
-    console.log('You lose!');
-    console.log(computerScore);
-    console.log(userScore);
+    round_result.textContent = 'You lose!';
+    user_score.textContent = `Your score is: ${userScore}`;
+    pc_score.textContent = `The computer's score is: ${computerScore}`;
   }
   else if(computerSelection == 'scissors' && userSelection == 'rock'){
     userScore++;
-    console.log('You win!'); 
-    console.log(computerScore);
-    console.log(userScore);
+    round_result.textContent = 'You win!'; 
+    user_score.textContent = `Your score is: ${userScore}`;
+    pc_score.textContent = `The computer's score is: ${computerScore}`;
   }
   else if(computerSelection == 'scissors' && userSelection == 'paper'){
     computerScore++;
-    console.log('You lose!'); 
-    console.log(computerScore);
-    console.log(userScore);
+    round_result.textContent = 'You lose!'; 
+    user_score.textContent = `Your score is: ${userScore}`;
+    pc_score.textContent = `The computer's score is: ${computerScore}`;
   }
   if(computerScore === 5){
-    console.log('The computer wins!');
+    final_result.textContent = 'THE COMPUTER WINS!';
     computerScore = 0;
     userScore = 0;
   }
   else if(userScore === 5){
-    console.log('The user wins!');
+    final_result.textContent = 'THE USER WINS!';
     computerScore = 0;
     userScore = 0;
   }
+
+
   
 };
 
