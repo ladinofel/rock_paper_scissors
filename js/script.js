@@ -14,25 +14,57 @@ let userScore = 0;
 function getComputerChoice(){  
   let randomNum = Math.floor(Math.random() * options.length);
   let randomChoice = options[randomNum];
+  if (randomChoice == 'rock'){
+    const pc_rock = document.querySelector('.pc-rock');
+    pc_rock.classList.add('clicked');
+    setTimeout(function() {
+      pc_rock.classList.remove('clicked');
+  }, 200 );
+  } 
+  else if(randomChoice == 'paper'){
+    const pc_paper = document.querySelector('.pc-paper');
+    pc_paper.classList.add('clicked');
+    setTimeout(function() {
+      pc_paper.classList.remove('clicked');
+  }, 200 );
+  } else {
+    const pc_scissors = document.querySelector('.pc-scissors');
+    pc_scissors.classList.add('clicked');
+    setTimeout(function() {
+      pc_scissors.classList.remove('clicked');
+  }, 200 );
+  }
   return randomChoice;
-}
+};
+
 
 function playerChoice(){
-  const user_btns = document.querySelectorAll('.user-btn');
-  user_btns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    if(btn.id === 'rock'){
-      userSelection = btn.id; 
-      playRound();
-    }
-    else if(btn.id === 'paper'){
-      userSelection = btn.id;
-      playRound();
-    } else {
-      userSelection = btn.id;
-      playRound();
-    }
+  const user_rock = document.querySelector('.user-rock');
+  user_rock.addEventListener('click', () => {
+    user_rock.classList.add('clicked');
+    setTimeout(function() {
+      user_rock.classList.remove('clicked');
+  }, 200 );
+  userSelection = 'rock';
+  playRound();
   });
+  const user_paper = document.querySelector('.user-paper');
+  user_paper.addEventListener('click', () => {
+    user_paper.classList.add('clicked');
+    setTimeout(function() {
+      user_paper.classList.remove('clicked');
+  }, 200 );
+  userSelection = 'paper';
+  playRound();
+  });
+  const user_scissors = document.querySelector('.user-scissors');
+  user_scissors.addEventListener('click', () => {
+    user_scissors.classList.add('clicked');
+    setTimeout(function() {
+      user_scissors.classList.remove('clicked');
+  }, 200 );
+  userSelection = 'scissors';
+  playRound();
   });
 };
 
@@ -90,11 +122,26 @@ function playRound(){
     final_result.textContent = 'THE USER WINS!';
     computerScore = 0;
     userScore = 0;
-  }
-
-
-  
+  } 
 };
+
+/*
+const pc_rock = document.querySelector('.pc-rock');
+pc_rock.addEventListener('click', () => {
+  pc_rock.classList.add('clicked');
+  setTimeout(function() {
+    pc_rock.classList.remove('clicked');
+  }, 200 );
+});
+
+/*function removeTransition(){
+  alert('test');
+};
+
+const user_btns = document.querySelectorAll('button');
+user_btns.forEach((btn) => {
+  btn.addEventListener('transitionend', removeTransition);
+});
 
 
 /*
