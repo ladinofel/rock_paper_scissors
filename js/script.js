@@ -1,8 +1,8 @@
 const user_selection = document.querySelector('#user-selection');
 const pc_selection = document.querySelector('#pc-selection');
 const round_result = document.querySelector('#round-result');
-const user_score = document.querySelector('#user-score');
-const pc_score = document.querySelector('#pc-score');
+const user_score = document.querySelector('.user-score');
+const pc_score = document.querySelector('.pc-score');
 const final_result = document.querySelector('#final-result');
 
 const options =['rock', 'paper', 'scissors'];
@@ -72,54 +72,114 @@ playerChoice();
 
 function playRound(){
   computerSelection = getComputerChoice();
-  user_selection.textContent = `You selected ${userSelection}.`;
-  pc_selection.textContent = `The computer selected ${computerSelection}.`;
   if(computerSelection == userSelection){
-    round_result.textContent = 'There has been a tie.'; 
+    const user_sect = document.querySelector('.user-sect');
+    const game_result_user = document.createElement('p');
+    game_result_user.textContent = "TIE";
+    const pc_sect = document.querySelector('.pc-sect');
+    const game_result_pc = document.createElement('p');
+    game_result_pc.textContent = "TIE";
+    user_sect.appendChild(game_result_user);
+    pc_sect.appendChild(game_result_pc);
+   
   }
   else if(computerSelection == 'rock' && userSelection == 'paper'){
     userScore++;
-    round_result.textContent = 'You win!';
-    user_score.textContent = `Your score is: ${userScore}`;
-    pc_score.textContent = `The computer's score is: ${computerScore}`;
+    const user_sect = document.querySelector('.user-sect');
+    const game_result_user = document.createElement('p');
+    game_result_user.textContent = "WIN";
+    const pc_sect = document.querySelector('.pc-sect');
+    const game_result_pc = document.createElement('p');
+    game_result_pc.textContent = "LOSE";
+    user_sect.appendChild(game_result_user);
+    pc_sect.appendChild(game_result_pc);  
+    let round_score_user = document.querySelector('.round-score-user');
+    round_score_user.textContent = `SCORE: ${userScore}`;  
+    let round_score_pc = document.querySelector('.round-score-pc');
+    round_score_pc.textContent = `SCORE: ${computerScore}`;    
   }
   else if(computerSelection == 'rock' && userSelection == 'scissors'){
     computerScore++;
-    round_result.textContent = 'You lose!';
-    user_score.textContent = `Your score is: ${userScore}`;
-    pc_score.textContent = `The computer's score is: ${computerScore}`;
+    const user_sect = document.querySelector('.user-sect');
+    const game_result_user = document.createElement('p');
+    game_result_user.textContent = "LOSE";
+    const pc_sect = document.querySelector('.pc-sect');
+    const game_result_pc = document.createElement('p');
+    game_result_pc.textContent = "WIN";
+    user_sect.appendChild(game_result_user);
+    pc_sect.appendChild(game_result_pc);   
+    let round_score_user = document.querySelector('.round-score-user');
+    round_score_user.textContent = `SCORE: ${userScore}`;  
+    let round_score_pc = document.querySelector('.round-score-pc');
+    round_score_pc.textContent = `SCORE: ${computerScore}`;   
   }
   else if(computerSelection == 'paper' && userSelection == 'scissors'){
     userScore++;
-    round_result.textContent = 'You win!';
-    user_score.textContent = `Your score is: ${userScore}`;
-    pc_score.textContent = `The computer's score is: ${computerScore}`;
+    const user_sect = document.querySelector('.user-sect');
+    const game_result_user = document.createElement('p');
+    game_result_user.textContent = "WIN";
+    const pc_sect = document.querySelector('.pc-sect');
+    const game_result_pc = document.createElement('p');
+    game_result_pc.textContent = "LOSE";
+    user_sect.appendChild(game_result_user);
+    pc_sect.appendChild(game_result_pc);    
+    let round_score_user = document.querySelector('.round-score-user');
+    round_score_user.textContent = `SCORE: ${userScore}`;  
+    let round_score_pc = document.querySelector('.round-score-pc');
+    round_score_pc.textContent = `SCORE: ${computerScore}`;  
   }
   else if(computerSelection == 'paper' && userSelection == 'rock'){
     computerScore++;
-    round_result.textContent = 'You lose!';
-    user_score.textContent = `Your score is: ${userScore}`;
-    pc_score.textContent = `The computer's score is: ${computerScore}`;
+    const user_sect = document.querySelector('.user-sect');
+    const game_result_user = document.createElement('p');
+    game_result_user.textContent = "LOSE";
+    const pc_sect = document.querySelector('.pc-sect');
+    const game_result_pc = document.createElement('p');
+    game_result_pc.textContent = "WIN";
+    user_sect.appendChild(game_result_user);
+    pc_sect.appendChild(game_result_pc); 
+    let round_score_user = document.querySelector('.round-score-user');
+    round_score_user.textContent = `SCORE: ${userScore}`;  
+    let round_score_pc = document.querySelector('.round-score-pc');
+    round_score_pc.textContent = `SCORE: ${computerScore}`;  
   }
   else if(computerSelection == 'scissors' && userSelection == 'rock'){
     userScore++;
-    round_result.textContent = 'You win!'; 
-    user_score.textContent = `Your score is: ${userScore}`;
-    pc_score.textContent = `The computer's score is: ${computerScore}`;
+    const user_sect = document.querySelector('.user-sect');
+    const game_result_user = document.createElement('p');
+    game_result_user.textContent = "WIN";
+    const pc_sect = document.querySelector('.pc-sect');
+    const game_result_pc = document.createElement('p');
+    game_result_pc.textContent = "LOSE";
+    user_sect.appendChild(game_result_user);
+    pc_sect.appendChild(game_result_pc); 
+    let round_score_user = document.querySelector('.round-score-user');
+    round_score_user.textContent = `SCORE: ${userScore}`;  
+    let round_score_pc = document.querySelector('.round-score-pc');
+    round_score_pc.textContent = `SCORE: ${computerScore}`;   
   }
   else if(computerSelection == 'scissors' && userSelection == 'paper'){
     computerScore++;
-    round_result.textContent = 'You lose!'; 
-    user_score.textContent = `Your score is: ${userScore}`;
-    pc_score.textContent = `The computer's score is: ${computerScore}`;
+    const user_sect = document.querySelector('.user-sect');
+    const game_result_user = document.createElement('p');
+    game_result_user.textContent = "LOSE";
+    const pc_sect = document.querySelector('.pc-sect');
+    const game_result_pc = document.createElement('p');
+    game_result_pc.textContent = "WIN";
+    user_sect.appendChild(game_result_user);
+    pc_sect.appendChild(game_result_pc); 
+    let round_score_user = document.querySelector('.round-score-user');
+    round_score_user.textContent = `SCORE: ${userScore}`;  
+    let round_score_pc = document.querySelector('.round-score-pc');
+    round_score_pc.textContent = `SCORE: ${computerScore}`;  
   }
   if(computerScore === 5){
-    final_result.textContent = 'THE COMPUTER WINS!';
+    
     computerScore = 0;
     userScore = 0;
   }
   else if(userScore === 5){
-    final_result.textContent = 'THE USER WINS!';
+    
     computerScore = 0;
     userScore = 0;
   } 
