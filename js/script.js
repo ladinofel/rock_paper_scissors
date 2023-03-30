@@ -174,14 +174,24 @@ function playRound(){
     round_score_pc.textContent = `SCORE: ${computerScore}`;  
   }
   if(computerScore === 5){
-    
-    computerScore = 0;
-    userScore = 0;
+    const modal = document.querySelector('.modal');
+    modal.showModal();
+    const game_summary = document.querySelector('.game-summary');
+    game_summary.textContent = 'THE COMPUTER WINS';
+    const score_summary_user = document.querySelector('.score-summary-user');
+    score_summary_user.textContent = `USER SCORE: ${userScore}`;
+    const score_summary_computer = document.querySelector('.score-summary-computer');
+    score_summary_computer.textContent = `COMPUTER SCORE: ${computerScore}`;
   }
   else if(userScore === 5){
-    
-    computerScore = 0;
-    userScore = 0;
+    const modal = document.querySelector('.modal');
+    modal.showModal();
+    const game_summary = document.querySelector('.game-summary');
+    game_summary.textContent = 'THE USER WINS';
+    const score_summary_user = document.querySelector('.score-summary-user');
+    score_summary_user.textContent = `USER SCORE: ${userScore}`;
+    const score_summary_computer = document.querySelector('.score-summary-computer');
+    score_summary_computer.textContent = `COMPUTER SCORE: ${computerScore}`;
   } 
 };
 

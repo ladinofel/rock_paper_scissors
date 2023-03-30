@@ -30,7 +30,7 @@ button {
   border-radius: 15px;
   padding: 5px;
   border-width: 4px;
-  transition: all 0,8s;
+  transition:all 0,8s;
   
 }
 
@@ -94,6 +94,32 @@ h2 {
 
 p {
   display: flex;
+  justify-content: center
+}
+
+
+.refresh-sect {
+  display: flex;
   justify-content: center;
-  
+  margin: 20px;
+}
+
+.refresh {
+  font-size: large;
+  padding: 10px;
+}
+
+.refresh:hover {
+  background-color:#6A35C1;
+  cursor: pointer;
+  color: #FDF7FF;
+}
+
+.modal {
+  border-radius: 15px;
+}
+
+.modal::backdrop{
+  background: linear-gradient(45deg, purple, blue);
+  opacity: .6;
 }
