@@ -38,7 +38,7 @@ cursor: pointer;
 }
 
 .clicked {
-  transform: scale(1.1);
+  transform: scale(1.2);
   background-color:#6A35C1;
   border-radius: 15px;
   border-width: 4px;

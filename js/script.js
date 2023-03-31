@@ -5,7 +5,7 @@ let userSelection;
 let computerScore = 0;
 let userScore = 0;
 
-//This function returns the choice of the computer
+//This function returns the computer choice 
 function getComputerChoice(){  
   let randomNum = Math.floor(Math.random() * options.length);
   let randomChoice = options[randomNum];
@@ -32,7 +32,7 @@ function getComputerChoice(){
   return randomChoice;
 };
 
-
+//This function returns the player choice and triggers the function playRound 
 function getPlayerChoice(){
   const user_rock = document.querySelector('#user-rock');
   user_rock.addEventListener('click', () => {
@@ -65,6 +65,7 @@ function getPlayerChoice(){
 
 getPlayerChoice();
 
+//This function plays a round, modifies the DOM and triggers a modal with the result of the game
 function playRound(){
   computerSelection = getComputerChoice();
   if(computerSelection == userSelection){
